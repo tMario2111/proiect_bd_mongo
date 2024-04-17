@@ -10,6 +10,7 @@ import {
 import Videogames from './pages/Videogames';
 import Reviews from './pages/Reviews';
 import Consoles from './pages/Consoles';
+import EditVideogameForm from './pages/EditVideogameForm';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/consoles/:gameId",
     element: <Consoles/>
+  },
+  {
+    path: "/editVideogame/:gameId",
+    element: <EditVideogameForm/>
   }
 ]);
 

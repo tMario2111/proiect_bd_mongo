@@ -2,7 +2,7 @@ var Express = require("express");
 var cors = require("cors");
 
 const bodyParser = require('body-parser');
-const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId, Decimal128 } = require('mongodb');
 
 var app = Express();
 app.use(cors());
@@ -66,11 +66,46 @@ app.get("/getConsoles/:videogameId", async (req, res) => {
 
     let supportedConsoleIds = game_results.supportedConsoles;
 
-    // let collection_consoles = await database.collection("Consoles");
-    // let results = await collection_consoles.find({ _id: { $in: supportedConsoleIds }});
-
-    // console.log(results);
-    //
+    let collection_consoles = await database.collection("Consoles");
+    let results = await collection_consoles.find({ _id: { $in: supportedConsoleIds }}).toArray();
 
     res.send(results).status(200);
 });
+
+app.delete("/deleteVideogame/:videogameId", async (req, res) => {
+    try {
+        const query = { _id: new ObjectId(req.params.videogameId) };
+    
+        const collection = database.collection("Videogames");
+        let result = await collection.deleteOne(query);
+    
+        res.send(result).status(200);
+      } catch (err) {
+        console.error(err);
+        res.status(500).send("Error deleting videogame");
+      }
+})
+
+app.patch("/editVideogame/:id", async (req, res) => {
+    try {
+    
+      const { videogameId, newName, newReleaseDate, newGenre, newPrice} = req.body;
+
+      const query = { _id: new ObjectId(videogameId) };
+      const updates = {
+        $set: {
+            name: newName,
+            releaseDate: newReleaseDate,
+            genre: newGenre,
+            releasePrice: Decimal128.fromString(newPrice),
+        },
+      };
+  
+      let collection = await database.collection("Videogames");
+      let result = await collection.updateOne(query, updates);
+      res.send(result).status(200);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send("Error updating videogame");
+    }
+  });
