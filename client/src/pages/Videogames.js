@@ -30,6 +30,9 @@ function Videogames() {
     return (
         <div>
             <h2>My Videogames</h2>
+            <Link to={`/addVideogame`}>
+                <button type="button" className="btn btn-primary">Add videogame</button>
+            </Link>
             <table className="table">
                 <thead>
                     <tr>

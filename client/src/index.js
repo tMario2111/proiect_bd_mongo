@@ -11,6 +11,7 @@ import Videogames from './pages/Videogames';
 import Reviews from './pages/Reviews';
 import Consoles from './pages/Consoles';
 import EditVideogameForm from './pages/EditVideogameForm';
+import NewVideogameForm from './pages/NewVideogameForm';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/editVideogame/:gameId",
     element: <EditVideogameForm/>
+  },
+  {
+    path: "/addVideogame",
+    element: <NewVideogameForm/>
   }
 ]);
 

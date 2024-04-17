@@ -95,7 +95,7 @@ app.patch("/editVideogame/:id", async (req, res) => {
       const updates = {
         $set: {
             name: newName,
-            releaseDate: newReleaseDate,
+            releaseDate: new Date(newReleaseDate),
             genre: newGenre,
             releasePrice: Decimal128.fromString(newPrice),
         },
@@ -107,5 +107,25 @@ app.patch("/editVideogame/:id", async (req, res) => {
     } catch (err) {
       console.error(err);
       res.status(500).send("Error updating videogame");
+    }
+  });
+
+  app.post("/addVideogame", async (req, res) => {
+    try {
+      const { name, releaseDate, genre, price } = req.body;
+      const newDocument =   {
+                name: name,
+                releaseDate: new Date(releaseDate),
+                genre: genre,
+                releasePrice: Decimal128.fromString(price),
+                reviews: [],
+                supportedConsoles: []
+      }
+      let collection = await database.collection("Videogames");
+      let result = await collection.insertOne(newDocument);
+      res.send(result).status(204);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send("Error adding videogame");
     }
   });
