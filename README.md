@@ -1,6 +1,6 @@
 ## Conținutul colecțiilor și exemple de funcții (find, insert, update, delete) apelate de către aplicația de backend
 
-Continutul bazei de date se afla in fisiere [db.Videogames.json](./db.Videogames.json) si [db.Consoles.json](db.Consoles.json).
+Conținutul bazei de date se află in fișierele [db.Videogames.json](./db.Videogames.json) si [db.Consoles.json](db.Consoles.json).
 
 Exemple de funcții apelate de backend:
 
