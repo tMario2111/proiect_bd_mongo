@@ -41,7 +41,7 @@ function NewVideogameForm() {
 
     return (
         <div className="container">
-            <h2>Add Player</h2>
+            <h2>Add videogame</h2>
             <form onSubmit={handleSubmit}>
             <div className="mb-3">
                     <label htmlFor="videogameName" className="form-label">Videogame name</label>

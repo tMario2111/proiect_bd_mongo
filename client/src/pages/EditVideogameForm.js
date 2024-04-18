@@ -51,7 +51,7 @@ function EditVideogameForm() {
 
     return (
         <div className="container">
-            <h2>Edit Player</h2>
+            <h2>Edit Videogame</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="videogameName" className="form-label">Videogame name</label>

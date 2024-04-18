@@ -99,4 +99,13 @@ app.patch("/editVideogame/:id", async (req, res) => {
 
 ![](./pagina_principala.png)
 
-Pagina principală a aplicației permite vizualizarea colecției `Videogames.`
+Pagina principală a aplicației permite vizualizarea colecției `Videogames`, adăugarea documentelor, precum și ștergerea / editarea acestora.
+
+Folosind link-urile de pe rândurile `Reviews`, `Supported consoles` se pot vizualiza recenziile, respectiv consolele unui anumit joc.
+
+![](./recenzii.png)
+![](./console.png)
+
+Butoanele `Add videogame` și `Edit` deschid o pagină nouă care permite adăugarea / modificarea unui document din colecția `videogames`.
+
+![](./editare_joc.png)
