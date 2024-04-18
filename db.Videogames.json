@@ -1,0 +1,155 @@
+[{
+  "_id": {
+    "$oid": "660844b1d84d8146eb449e7b"
+  },
+  "name": "Titanfall 2",
+  "releaseDate": {
+    "$date": "2016-10-28T00:00:00.000Z"
+  },
+  "genre": "First-person shooter",
+  "releasePrice": {
+    "$numberDecimal": "59.99"
+  },
+  "reviews": [
+    {
+      "critic": "IGN",
+      "score": 8.6,
+      "maximumScore": 10
+    },
+    {
+      "critic": "GameSpot",
+      "score": 9,
+      "maximumScore": 10
+    }
+  ],
+  "supportedConsoles": [
+    {
+      "$oid": "66095be82d4cfa4ad509fdac"
+    },
+    {
+      "$oid": "66095c772d4cfa4ad509fdb0"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "660844b1d84d8146eb449e80"
+  },
+  "name": "Inside",
+  "releaseDate": {
+    "$date": "2016-06-29T00:00:00.000Z"
+  },
+  "genre": "Puzzle-platformer",
+  "releasePrice": {
+    "$numberDecimal": "19.99"
+  },
+  "reviews": [
+    {
+      "critic": "IGN",
+      "score": 10,
+      "maximumScore": 10
+    },
+    {
+      "critic": "GameSpot",
+      "score": 9,
+      "maximumScore": 10
+    }
+  ],
+  "supportedConsoles": [
+    {
+      "$oid": "66095be82d4cfa4ad509fdac"
+    },
+    {
+      "$oid": "66095c772d4cfa4ad509fdb0"
+    },
+    {
+      "$oid": "66095cce2d4cfa4ad509fdb1"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "660844b1d84d8146eb449e81"
+  },
+  "name": "Overwatch edit",
+  "releaseDate": {
+    "$date": "2016-05-24T00:00:00.000Z"
+  },
+  "genre": "First-person shooter, Multiplayer",
+  "reviews": [
+    {
+      "critic": "IGN",
+      "score": 9.4,
+      "maximumScore": 10
+    },
+    {
+      "critic": "GameSpot",
+      "score": 9,
+      "maximumScore": 10
+    },
+    {
+      "critic": "Metacritic",
+      "score": 79,
+      "maximumScore": 100
+    }
+  ],
+  "releasePrice": {
+    "$numberDecimal": "69.99"
+  },
+  "supportedConsoles": [
+    {
+      "$oid": "66095be82d4cfa4ad509fdac"
+    },
+    {
+      "$oid": "66095c772d4cfa4ad509fdb0"
+    },
+    {
+      "$oid": "66095cce2d4cfa4ad509fdb1"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "660844b1d84d8146eb449e7f"
+  },
+  "name": "Uncharted 4: A Thief's End",
+  "releaseDate": {
+    "$date": "2016-05-10T00:00:00.000Z"
+  },
+  "genre": "Action-adventure",
+  "reviews": [
+    {
+      "critic": "IGN",
+      "score": 9,
+      "maximumScore": 10
+    },
+    {
+      "critic": "GameSpot",
+      "score": 10,
+      "maximumScore": 10
+    }
+  ],
+  "releasePrice": {
+    "$numberDecimal": "59.99"
+  },
+  "supportedConsoles": [
+    {
+      "$oid": "66095be82d4cfa4ad509fdac"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6620244c5e3e95a2aacabd73"
+  },
+  "name": "Factorio",
+  "releaseDate": {
+    "$date": "2020-05-24T00:00:00.000Z"
+  },
+  "genre": "Automation, Sandbox",
+  "releasePrice": {
+    "$numberDecimal": "34.99"
+  },
+  "reviews": [],
+  "supportedConsoles": []
+}]

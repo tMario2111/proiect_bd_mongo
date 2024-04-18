@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "66095be82d4cfa4ad509fdac"
+  },
+  "name": "PlayStation 4",
+  "releasePrice": {
+    "$numberDecimal": "349.99"
+  },
+  "manufacturer": "Sony"
+},
+{
+  "_id": {
+    "$oid": "66095c772d4cfa4ad509fdb0"
+  },
+  "name": "Xbox One",
+  "releasePrice": {
+    "$numberDecimal": "349.99"
+  },
+  "manufacturer": "Microsoft"
+},
+{
+  "_id": {
+    "$oid": "66095cce2d4cfa4ad509fdb1"
+  },
+  "name": "Nintendo Switch",
+  "releasePrice": {
+    "$numberDecimal": "329.99"
+  },
+  "manufacturer": "Nintendo"
+}]
